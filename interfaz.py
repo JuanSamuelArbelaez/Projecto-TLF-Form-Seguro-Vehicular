@@ -32,7 +32,7 @@ class FormularioSeguro:
         self.conductores_extra = []  # lista de dicts/entradas de conductores extra
 
         self.crear_campos_usuario()
-        self.crear_campos_vehiculo()   # ahora con subframe y grid
+        self.crear_campos_vehiculo()
         self.crear_conductor_principal()
         self.crear_botones()
 
@@ -51,7 +51,7 @@ class FormularioSeguro:
             row.pack(fill="x", padx=12, pady=4)
             tk.Label(row, text=label, width=26, anchor="w").pack(side="left")
             if key == "fecha_nac":
-                entry = DateEntry(row, date_pattern="yyyy-mm-dd", width=28)
+                entry = DateEntry(row, date_pattern="dd/mm/yyyy", width=28)
             else:
                 entry = tk.Entry(row, width=30)
             entry.pack(side="left")
